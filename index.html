@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFC Review Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dark-background"></div>
+    
+    <!-- Welcome Animation Overlay -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-content">
+            <div class="nfc-icon">
+                <i class="fas fa-wifi"></i>
+            </div>
+            <h1 class="welcome-title" id="welcomeTitle">Thank you for tapping!</h1>
+            <p class="welcome-subtitle" id="welcomeSubtitle">Loading your experience...</p>
+            <div class="welcome-spinner"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="glass-card" id="mainCard">
+            <!-- Loading State -->
+            <div class="loading-state hidden" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Loading business information...</p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content hidden" id="mainContent">
+                <!-- Business Logo -->
+                <div class="logo-container">
+                    <img id="businessLogo" src="" alt="Business Logo" class="business-logo">
+                </div>
+
+                <!-- Dynamic Headlines -->
+                <div class="headlines">
+                    <h1 id="mainHeadline">Thanks for visiting our business!</h1>
+                    <p id="subHeadline">Your feedback helps us improve and serve you better</p>
+                </div>
+
+                <!-- Review Form -->
+                <form class="review-form" id="reviewForm">
+                    <div class="form-group">
+                        <label for="customerName" class="form-label">Full Name *</label>
+                        <input type="text" id="customerName" name="customerName" class="form-control" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail" class="form-label">Email Address *</label>
+                        <input type="email" id="customerEmail" name="customerEmail" class="form-control" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="marketingConsent" name="marketingConsent">
+                            <span class="checkmark"></span>
+                            I'd like to receive updates and offers from this business
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitButton">
+                        <span class="btn-text">Continue to Review</span>
+                        <span class="btn-spinner hidden">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </span>
+                    </button>
+                </form>
+
+                <!-- Social Media Links -->
+                <div class="social-links" id="socialLinks">
+                    <p class="social-text">Connect with us:</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook hidden" id="facebookLink" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram hidden" id="instagramLink" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon website hidden" id="websiteLink" target="_blank">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-state hidden" id="errorState">
+                <div class="error-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h2>Business Not Found</h2>
+                <p>Sorry, we couldn't find the business you're looking for. Please check the link and try again.</p>
+            </div>
+
+            <!-- Success State -->
+            <div class="success-state hidden" id="successState">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Thank You!</h2>
+                <p id="successMessage">Your information has been submitted successfully.</p>
+                <p class="redirect-message">Redirecting to Google Reviews...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
