@@ -76,20 +76,6 @@ class NFCReviewApp {
           website: "https://sunrisecoffee.com",
         },
       },
-      "artisan-brew-house": {
-        id: "artisan-brew-house",
-        name: "Artisan Brew House",
-        type: "Coffee Shop",
-        description:
-          "Specialty single-origin coffee and handcrafted pastries in downtown since 2018",
-        logo: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=200&h=200&fit=crop&crop=center",
-        googleReviewUrl: "https://g.page/r/CaRtIsAnBrEwHoUsE/review",
-        socialMedia: {
-          facebook: "https://facebook.com/artisanbrewhouse",
-          instagram: "https://instagram.com/artisanbrewhouse",
-          website: "https://artisanbrewhouse.com",
-        },
-      },
       "quick-fix-auto": {
         id: "quick-fix-auto",
         name: "Quick Fix Auto Repair",
